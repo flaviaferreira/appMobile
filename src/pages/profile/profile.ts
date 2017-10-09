@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import { User } from './../../app/common/model/user';
 import { UserService } from './../../providers/user.service';
+import { ChangePasswordPage } from './change-password/change-password';
 
 @Component({
     selector: 'page-profile',
@@ -20,5 +21,9 @@ export class ProfilePage {
         });
 
     }
+
+	changePass() {
+		this.navCtrl.setRoot(ChangePasswordPage);
+	}    
 
 }

@@ -13,10 +13,12 @@ import { HeaderComponent } from "./common/components/header/header.component";
 
 // PAGES - INICIO
 import { HomePage } from '../pages/home/home';
+import { ChangePasswordPage } from './../pages/profile/change-password/change-password';
 import { ProfilePage } from './../pages/profile/profile';
 // PAGES - FIM
 
 // SERVICES - INCIO
+import { AccountService } from './../providers/account.service';
 import { UserService } from './../providers/user.service';
 // SERVICES - FIM
 
@@ -25,6 +27,7 @@ import { UserService } from './../providers/user.service';
     MyApp,
     HeaderComponent,
     HomePage,
+    ChangePasswordPage,
     ProfilePage
   ],
   imports: [
@@ -36,11 +39,13 @@ import { UserService } from './../providers/user.service';
     MyApp,
     HeaderComponent,
     HomePage,
+    ChangePasswordPage,
     ProfilePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    AccountService,
     UserService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
