@@ -12,18 +12,20 @@ import { HeaderComponent } from "./common/components/header/header.component";
 // COMPONENTS - FIM
 
 // PAGES - INICIO
+import { HomePage } from '../pages/home/home';
+import { ProfilePage } from './../pages/profile/profile';
 // PAGES - FIM
 
 // SERVICES - INCIO
+import { UserService } from './../providers/user.service';
 // SERVICES - FIM
-
-import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
     MyApp,
     HeaderComponent,
-    HomePage
+    HomePage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -33,11 +35,13 @@ import { HomePage } from '../pages/home/home';
   entryComponents: [
     MyApp,
     HeaderComponent,
-    HomePage
+    HomePage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    UserService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
